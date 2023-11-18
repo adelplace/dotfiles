@@ -1,5 +1,4 @@
 #!/bin/bash
 
 feh --bg-scale /home/adelplace/Images/wallhaven-x6k7ml.jpg
-swaybg -i /home/adelplace/Images/wallhaven-zyvr7w.jpg
 
