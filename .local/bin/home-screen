@@ -1,0 +1,15 @@
+#!/bin/bash
+
+xrandr --auto
+xrandr --output DP1 --primary
+xrandr --output eDP1 --auto --right-of DP1 
+i3-msg "workspace 1; move workspace to output DP1"
+i3-msg "workspace 2; move workspace to output DP1"
+i3-msg "workspace 3; move workspace to output DP1"
+i3-msg "workspace 4; move workspace to output eDP1"
+i3-msg "workspace 5; move workspace to output DP1"
+
+background
+
+xrdb -merge ~/.Xresources.4k
+i3 restart
