@@ -10,19 +10,19 @@ window:
 
 font:
   normal:
-    family: RobotoMono Nerd Font
+    family: Fira Code
     style: Regular
 
   bold:
-    family: RobotoMono Nerd Font
+    family: Fira Code
     style: Bold
 
   italic:
-    family: RobotoMono Nerd Font
+    family: Fira Code
     style: Italic
 
   bold_italic:
-    family: RobotoMono Nerd Font
+    family: Fira Code
     style: Bold Italic
 
   size: 13
