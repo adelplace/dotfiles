@@ -148,6 +148,7 @@ fonts.fonts = with pkgs; [
 	killall
 	networkmanagerapplet
 	blueman
+	auto-cpufreq
     ];
   };
 
