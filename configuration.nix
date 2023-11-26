@@ -11,9 +11,8 @@
     ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -47,7 +46,10 @@
   services.xserver.enable = true;
 
   # Enable the XFCE Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.gdm = {
+    enable = true;
+    wayland = true;
+  };
   services.xserver.desktopManager.xfce.enable = true;
   services.xserver.windowManager.i3 = {
       enable = true;
@@ -91,7 +93,8 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-fonts.fonts = with pkgs; [
+fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
@@ -109,7 +112,7 @@ fonts.fonts = with pkgs; [
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-    #  thunderbird
+	firefox
 	zsh
 	zsh-z
 	oh-my-zsh
@@ -143,12 +146,15 @@ fonts.fonts = with pkgs; [
 	jetbrains.idea-ultimate
 	polybar
 	docker-compose
-	conduktor
 	rofi
 	killall
 	networkmanagerapplet
 	blueman
 	auto-cpufreq
+	distrobox
+	wofi
+	waybar
+	wdisplays
     ];
   };
 
@@ -183,8 +189,15 @@ fonts.fonts = with pkgs; [
     };
   };
 
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   # List services that you want to enable:
 
+  services.flatpak.enable = true;
+  services.blueman.enable = true;
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
