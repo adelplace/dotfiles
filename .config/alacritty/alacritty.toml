@@ -1,0 +1,27 @@
+import = ["/home/adelplace/.config/alacritty/catppuccin/catppuccin-mocha.yml"]
+
+[font]
+size = 13
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "FiraCode Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[window]
+opacity = 0.8
+
+[window.padding]
+x = 10
+y = 10

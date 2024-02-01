@@ -6,19 +6,36 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 30,
-    "modules-left": ["clock", "hyprland/workspaces", "hyprland/window"],
+    "modules-left": ["clock", "sway/workspaces", "sway/window"],
     "modules-center": [],
     "modules-right": ["temperature","custom/power_profile","battery","backlight","pulseaudio","pulseaudio#microphone","tray"],
     "hyprland/window": {
         "format": "{}"
     },
 
-	"hyprland/workspaces": {
-		"format": "{name}",
-		"persistent-workspaces": {
-			"*": [ 1,2,3,4,5,6,7,8,9 ],
-		}
-	},
+	//"hyprland/workspaces": {
+	//	"format": "{name}",
+	//	"persistent-workspaces": {
+	//		"*": [ 1,2,3,4,5,6,7,8,9 ],
+	//	}
+	//},
+	"sway/workspaces": {
+	    "disable-scroll": true,
+	    "all-outputs": true,
+	    "format": "{name}: {icon}",
+	    "format-icons": {
+		"1": "",
+		"2": "",
+		"3": "",
+		"4": "",
+		"5": "",
+		"urgent": "",
+		"focused": "",
+		"default": "",
+		"high-priority-named": ["1", "2"]
+	    }
+	}
+    }
 
     //"custom/power_profile":{
         //shows the current power profile and switches to next on click
