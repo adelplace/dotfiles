@@ -1,4 +1,3 @@
 export PATH=$PATH:~/.local/bin
+export QT_QPA_PLATFORM=xcb
 
-# Intellj on sway
-export _JAVA_AWT_WM_NONREPARENTING=1
