@@ -1,8 +1,0 @@
-#!/bin/bash
-
-xrdb -merge ~/.Xresources.FHD
-xrandr --output eDP1 --mode 1920x1080 --scale 1x1 --output DP1 --same-as eDP1 --mode 1920x1080
-xrandr --output eDP1 --mode 1920x1080 --scale 1x1 --output DP2 --same-as eDP1 --mode 1920x1080
-xrandr --output eDP1 --mode 1920x1080 --scale 1x1 --output DP3 --same-as eDP1 --mode 1920x1080
-xrandr --output eDP1 --mode 1920x1080 --scale 1x1 --output DP4 --same-as eDP1 --mode 1920x1080
-i3 restart

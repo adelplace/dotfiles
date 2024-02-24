@@ -1,6 +1,0 @@
-#!/bin/bash
-xrandr --auto
-xrandr --output eDP1 --mode 1920x1200
-xrdb -merge ~/.Xresources
-i3 restart
-background
