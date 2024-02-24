@@ -1,8 +1,8 @@
-stow fonts
-stow foot
-stow bin
-stow zsh
-stow tmux
-stow vim
-stow sway
-stow waybar
+stow fonts --adopt
+stow foot --adopt
+stow bin --adopt
+stow zsh --adopt
+stow tmux --adopt
+stow vim --adopt
+stow sway --adopt
+stow waybar --adopt
