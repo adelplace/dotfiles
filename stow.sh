@@ -1,6 +1,8 @@
 stow fonts
 stow foot
 stow bin
-stow profile
+stow zsh
 stow tmux
 stow vim
+stow sway
+stow waybar
