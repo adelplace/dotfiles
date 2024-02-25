@@ -9,6 +9,7 @@ source $ZSH/oh-my-zsh.sh
 alias vim=nvim
 alias v=nvim
 alias lg=lazygit
+alias ld=lazydocker
 alias rm=rip
 
 [ -f /opt/nvim-linux64 ] && export PATH="/opt/nvim-linux64/bin:$PATH"
