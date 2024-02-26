@@ -6,6 +6,8 @@ plugins=(git z)
 
 source $ZSH/oh-my-zsh.sh
 
+export BROWSER=google-chrome-stable
+
 alias vim=nvim
 alias v=nvim
 alias lg=lazygit
