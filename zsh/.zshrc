@@ -1,4 +1,4 @@
-export PATH="$PATH:/home/adelplace/.local/bin"
+export PATH="$PATH:/home/adelplace/.local/bin:/opt/nvim-linux64/bin"
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
@@ -27,3 +27,6 @@ if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# DIRENV
+eval "$(direnv hook zsh)"
