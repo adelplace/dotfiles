@@ -36,7 +36,6 @@ return {
           end,
         })
       )
-      table.insert(opts.adapters, require("neotest-vitest"))
     end,
   },
 }
