@@ -1,4 +1,4 @@
-export PATH="$PATH:/home/adelplace/.local/bin:/opt/nvim-linux64/bin:/opt/go/bin"
+export PATH="$PATH:/home/adelplace/.local/bin:/opt/nvim-linux64/bin:/opt/go/bin:/opt/google-cloud-sdk/bin"
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
