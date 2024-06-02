@@ -1,0 +1,12 @@
+#!/bin/sh
+
+evolve_connect() {
+	bluetoothctl connect 08:C8:C2:6A:0A:A6
+}
+
+evolve_disconnect() {
+	bluetoothctl disconnect 08:C8:C2:6A:0A:A6
+}
+
+select=$(echo "evolve_connect\nevolve_disconnect" | rofi -dmenu)
+eval $select

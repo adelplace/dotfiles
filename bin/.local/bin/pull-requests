@@ -1,0 +1,15 @@
+#!/bin/sh
+
+list=$(
+	gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" \
+		/repos/$MAIN_REPO/pulls | jq -r '.[] | ((.number|tostring) + " " + .title)'
+)
+selected=$(echo "$list" | rofi -dmenu -p "Run: " | cut -d ' ' -f1)
+if [ -z "$selected" ]; then
+	exit 1
+fi
+url=$(
+	gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" \
+		/repos/$MAIN_REPO/pulls/$selected | jq -r '.html_url'
+)
+$($BROWSER $url)

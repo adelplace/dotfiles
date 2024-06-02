@@ -1,0 +1,5 @@
+#!/bin/bash
+
+env=$(ls .env* | fzf)
+line=$(cat $env | fzf)
+wl-copy $(echo $line | cut -d'=' -f 2 | tr -d "'")

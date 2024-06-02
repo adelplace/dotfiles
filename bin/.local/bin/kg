@@ -1,0 +1,4 @@
+#!/bin/sh
+
+select=$(echo "pull-requests\nkg-docker-up\nkg-docker-stop" | rofi -dmenu)
+eval $select

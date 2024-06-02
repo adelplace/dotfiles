@@ -1,0 +1,12 @@
+#!/bin/sh
+
+display_high_refresh_rate() {
+	sway output eDP-1 mode 2880x1800@120.00Hz
+}
+
+display_low_refresh_rate() {
+	sway output eDP-1 mode 2880x1800@48.00Hz && swaymsg reload
+}
+
+select=$(echo "display_high_refresh_rate\ndisplay_low_refresh_rate" | rofi -dmenu)
+eval $select
