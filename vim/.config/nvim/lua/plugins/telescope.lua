@@ -12,7 +12,7 @@ return {
               width = 0.95,
             },
           },
-          path_display = { "truncate" },
+          path_display = { shorten = 3 },
         },
         pickers = {
           find_files = {
