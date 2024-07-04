@@ -31,6 +31,7 @@
   "mini.ai": { "branch": "main", "commit": "45587078f323eaf41b9f701bbc04f8d1ab008979" },
   "mini.comment": { "branch": "main", "commit": "080f00bb91fea4bab799820bd2ce835a88d0703a" },
   "mini.diff": { "branch": "main", "commit": "d052bf31cc01bb1dde0afd129d8dcdd9f36b9d35" },
+  "mini.icons": { "branch": "main", "commit": "3c51394b8815e0cb9beb385909803cd4816951c4" },
   "mini.pairs": { "branch": "main", "commit": "927d19cbdd0e752ab1c7eed87072e71d2cd6ff51" },
   "monokai-pro.nvim": { "branch": "master", "commit": "2bad2a92fe0ff6c8581d33a853a1b17592b83239" },
   "neo-tree.nvim": { "branch": "main", "commit": "206241e451c12f78969ff5ae53af45616ffc9b72" },
