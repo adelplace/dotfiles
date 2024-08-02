@@ -15,6 +15,15 @@ alias ld=lazydocker
 alias se='echo "dotenv $(ls .env* | fzf)" > .envrc; direnv allow'
 alias tw='tmux new-session -A -s adeo -c /home/adelplace/adeo'
 
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 [ -f /opt/nvim-linux64 ] && export PATH="/opt/nvim-linux64/bin:$PATH"
 
 #FZF
