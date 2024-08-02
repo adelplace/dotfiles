@@ -14,6 +14,7 @@ alias lg=lazygit
 alias ld=lazydocker
 alias se='echo "dotenv $(ls .env* | fzf)" > .envrc; direnv allow'
 alias tw='tmux new-session -A -s adeo -c /home/adelplace/adeo'
+alias fd=fdfind
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
