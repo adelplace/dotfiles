@@ -13,7 +13,6 @@ return {
             "--column",
             "--smart-case",
             "--hidden",
-            "--no-ignore",
           },
           layout_config = {
             vertical = {
