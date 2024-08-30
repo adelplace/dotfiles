@@ -142,9 +142,9 @@ window#waybar.hidden {
 }
 
 #battery {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    /*animation-timing-function: linear;*/
+    /*animation-iteration-count: infinite;*/
+    /*animation-direction: alternate;*/
     background: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
@@ -158,13 +158,13 @@ window#waybar.hidden {
 }
 
 #battery.warning.discharging {
-    animation-name: blink-warning;
-    animation-duration: 3s;
+    /*animation-name: blink-warning;*/
+    /*animation-duration: 3s;*/
 }
 
 #battery.critical.discharging {
-    animation-name: blink-critical;
-    animation-duration: 2s;
+    /*animation-name: blink-critical;*/
+    /*animation-duration: 2s;*/
 }
 
 label:focus {
