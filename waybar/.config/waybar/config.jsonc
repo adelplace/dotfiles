@@ -12,7 +12,7 @@
     "sway/mode"
   ],
   "modules-right": [
-    "custom/weather",
+    // "custom/weather",
     "custom/wlsunset",
     "custom/playerctl",
     // "custom/scratchpad",
