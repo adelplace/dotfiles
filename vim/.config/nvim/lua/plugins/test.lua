@@ -30,7 +30,7 @@ return {
       table.insert(
         opts.adapters,
         require("neotest-jest")({
-          jestCommand = "./node_modules/.bin/jest ",
+          jestCommand = "./node_modules/.bin/jest --maxWorkers=1",
           cwd = function()
             return vim.fn.getcwd()
           end,
