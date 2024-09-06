@@ -15,5 +15,29 @@ function InsertCucumberCmd()
   local cucumber = "npm run cucumber " .. filepath
   vim.fn.setreg("+", cucumber) -- write to clippoard
 end
-
 vim.keymap.set("n", "<leader>tx", InsertCucumberCmd, { noremap = true, silent = true, desc = "Copy cucumber cmd" })
+
+function vim.getVisualSelection()
+  vim.cmd('noau normal! "vy"')
+  local text = vim.fn.getreg("v")
+  vim.fn.setreg("v", {})
+
+  text = string.gsub(text, "\n", "")
+  if #text > 0 then
+    return text
+  else
+    return ""
+  end
+end
+
+local tb = require("telescope.builtin")
+
+vim.keymap.set("n", "<leader>sy", ":%s/<C-r><C-w>//gc<Left><Left>", { desc = "Replace" })
+vim.keymap.set("v", "<space>ss", function()
+  tb.live_grep({ default_text = vim.getVisualSelection() })
+end, { desc = "Search" })
+
+vim.keymap.set("v", "<space>sR", function()
+  local pattern = vim.fn.input("Search pattern: ")
+  return vim.cmd(":%s/" .. vim.getVisualSelection() .. "/" .. pattern .. "/gc")
+end, { desc = "Replace" })
