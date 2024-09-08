@@ -17,6 +17,9 @@ function InsertCucumberCmd()
 end
 vim.keymap.set("n", "<leader>tx", InsertCucumberCmd, { noremap = true, silent = true, desc = "Copy cucumber cmd" })
 
+vim.api.nvim_set_keymap("n", "<leader>pa", "ggVGp", { noremap = true, silent = true, desc = "Select all & past" })
+vim.api.nvim_set_keymap("n", "<leader>sa", "ggVG", { noremap = true, silent = true, desc = "Select all" })
+
 function vim.getVisualSelection()
   vim.cmd('noau normal! "vy"')
   local text = vim.fn.getreg("v")
