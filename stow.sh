@@ -9,3 +9,4 @@ stow vim
 stow sway
 mv ~/.config/waybar /tmp
 stow waybar
+stow zellij
