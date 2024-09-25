@@ -35,7 +35,7 @@ end
 
 local tb = require("telescope.builtin")
 
-vim.keymap.set("n", "<leader>sy", ":%s/<C-r><C-w>//gc<Left><Left>", { desc = "Replace" })
+vim.keymap.set("n", "<leader>sw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gcI<Left><Left><Left><Left>]], { desc = "Replace" })
 vim.keymap.set("v", "<space>ss", function()
   tb.live_grep({ default_text = vim.getVisualSelection() })
 end, { desc = "Search" })
@@ -44,3 +44,21 @@ vim.keymap.set("v", "<space>sR", function()
   local pattern = vim.fn.input("Search pattern: ")
   return vim.cmd(":%s/" .. vim.getVisualSelection() .. "/" .. pattern .. "/gc")
 end, { desc = "Replace" })
+
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.tsx", "*.ts" },
+  callback = function()
+    vim.lsp.buf.code_action({
+      apply = true,
+      context = {
+        only = { "source.removeUnused.ts" },
+        diagnostics = {},
+      },
+    })
+  end,
+})
