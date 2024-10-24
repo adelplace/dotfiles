@@ -13,5 +13,11 @@ return {
         },
       },
     },
+    default_component_configs = {
+      git_base = "master",
+    },
+  },
+  keys = {
+    { "<leader>ge", "<cmd>:Neotree git_status git_base=master<cr>", desc = "󰙅 Git Explorer" },
   },
 }
