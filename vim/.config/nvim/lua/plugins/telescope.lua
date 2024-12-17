@@ -27,6 +27,8 @@ return {
         pickers = {
           find_files = {
             hidden = true,
+            sort_lastused = true,
+            sort_mru = true,
           },
           grep_string = {
             additional_args = { "--hidden" },
