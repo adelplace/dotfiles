@@ -4,6 +4,7 @@ return {
     dependencies = {
       "haydenmeade/neotest-jest",
       "marilari88/neotest-vitest",
+      "olimorris/neotest-phpunit",
     },
     keys = {
       {
@@ -26,16 +27,16 @@ return {
         desc = "Run Watch",
       },
     },
-    opts = function(_, opts)
-      table.insert(
-        opts.adapters,
-        require("neotest-jest")({
+    opts = {
+      adapters = {
+        ["neotest-jest"] = {
           jestCommand = "./node_modules/.bin/jest --maxWorkers=1",
           cwd = function()
             return vim.fn.getcwd()
           end,
-        })
-      )
-    end,
+        },
+        ["neotest-phpunit"] = {},
+      },
+    },
   },
 }
