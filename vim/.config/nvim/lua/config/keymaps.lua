@@ -12,7 +12,7 @@ vim.keymap.set("x", "s", require("substitute").visual, { noremap = true })
 
 function InsertCucumberCmd()
   local filepath = vim.fn.expand("%:.")
-  local lnumbr = vim.fn.search("Scenario:", "bn")
+  local lnumbr = vim.fn.search("Scenario:", "cbn")
   local scenario = vim.fn.substitute(vim.fn.getline(lnumbr), "Scenario: ", "", "g")
   local cucumber = "npm run cucumber " .. filepath .. ' -- --name="' .. vim.fn.trim(scenario) .. '"'
   vim.fn.setreg("+", cucumber) -- write to clippoard
