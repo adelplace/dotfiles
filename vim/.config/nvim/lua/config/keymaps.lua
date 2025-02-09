@@ -12,7 +12,9 @@ vim.keymap.set("x", "s", require("substitute").visual, { noremap = true })
 
 function InsertCucumberCmd()
   local filepath = vim.fn.expand("%:.")
-  local cucumber = "npm run cucumber " .. filepath
+  local lnumbr = vim.fn.search("Scenario:", "bn")
+  local scenario = vim.fn.substitute(vim.fn.getline(lnumbr), "Scenario: ", "", "g")
+  local cucumber = "npm run cucumber " .. filepath .. ' -- --name="' .. vim.fn.trim(scenario) .. '"'
   vim.fn.setreg("+", cucumber) -- write to clippoard
 end
 vim.keymap.set("n", "<leader>tx", InsertCucumberCmd, { noremap = true, silent = true, desc = "Copy cucumber cmd" })
@@ -50,15 +52,15 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "*.tsx", "*.ts" },
-  callback = function()
-    vim.lsp.buf.code_action({
-      apply = true,
-      context = {
-        only = { "source.removeUnused.ts" },
-        diagnostics = {},
-      },
-    })
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = { "*.tsx", "*.ts" },
+--   callback = function()
+--     vim.lsp.buf.code_action({
+--       apply = true,
+--       context = {
+--         only = { "source.removeUnused.ts" },
+--         diagnostics = {},
+--       },
+--     })
+--   end,
+-- })
