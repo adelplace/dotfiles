@@ -52,15 +52,15 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "*.tsx", "*.ts" },
-  callback = function()
-    vim.lsp.buf.code_action({
-      apply = true,
-      context = {
-        only = { "source.removeUnusedImports" },
-        diagnostics = {},
-      },
-    })
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = { "*.tsx", "*.ts" },
+--   callback = function()
+--     vim.lsp.buf.code_action({
+--       apply = true,
+--       context = {
+--         only = { "source.removeUnused.ts" },
+--         diagnostics = {},
+--       },
+--     })
+--   end,
+-- })
