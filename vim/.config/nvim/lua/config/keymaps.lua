@@ -52,6 +52,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Quickfix
+vim.keymap.set("n", "[q", ":cprev<CR>")
+vim.keymap.set("n", "]q", ":cnext<CR>")
+
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 --   pattern = { "*.tsx", "*.ts" },
 --   callback = function()
