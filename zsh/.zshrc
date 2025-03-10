@@ -43,3 +43,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # DIRENV
 eval "$(direnv hook zsh)"
+
+# pnpm
+export PNPM_HOME="/home/adelplace/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
