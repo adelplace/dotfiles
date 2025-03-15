@@ -3,6 +3,8 @@
 -- Add any additional keymaps here
 vim.keymap.set("i", "jk", "<ESC>")
 vim.keymap.set("i", "kj", "<ESC>")
+vim.keymap.set("i", "jj", "<ESC>")
+vim.keymap.set("i", "kk", "<ESC>")
 
 -- substitute
 vim.keymap.set("n", "s", require("substitute").operator, { noremap = true })
