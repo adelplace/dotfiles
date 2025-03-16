@@ -11,7 +11,6 @@ return {
     "nvim-telescope/telescope.nvim",
   },
   keys = {
-    { "<leader>X", group = "ChatGPT" },
     { "<leader>Xc", "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
     {
       "<leader>Xe",

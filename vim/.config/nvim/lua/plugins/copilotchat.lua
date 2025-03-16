@@ -11,9 +11,8 @@ return {
     },
     -- See Commands section for default commands if you want to lazy load on them
     keys = {
-      { "<leader>C", group = "Copilot" },
-      { "<leader>Cc", "<cmd>CopilotChatOpen<CR>", desc = "Open Copilot Chat" },
-      { "<leader>Cs", "<cmd>CopilotChatClose<CR>", desc = "Close Copilot Chat" },
+      { "<leader>Co", "<cmd>CopilotChatOpen<CR>", desc = "Open Copilot Chat" },
+      { "<leader>Cc", "<cmd>CopilotChatClose<CR>", desc = "Close Copilot Chat" },
     },
   },
 }
