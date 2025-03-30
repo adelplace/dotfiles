@@ -1,7 +1,8 @@
 {
-    "window.commandCenter": 1,
-    "editor.formatOnSave": true,
-    "editor.lineNumbers": "relative",
-    "files.autoSave": "afterDelay",
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "window.commandCenter": 1,
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  "files.autoSave": "afterDelay",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.sideBar.location": "right"
 }
