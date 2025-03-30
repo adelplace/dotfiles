@@ -11,3 +11,4 @@ mv ~/.config/waybar /tmp
 stow waybar
 stow zellij
 crontab cron/cron
+stow cursor
