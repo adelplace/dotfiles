@@ -3,6 +3,11 @@ return {
   opts = {
     linters_by_ft = {
       markdown = { "markdownlint-cli2" },
+      javascript = {},
+      javascriptreact = {},
+      typescript = {},
+      typescriptreact = {},
+      vue = {},
     },
     linters = {
       ["markdownlint-cli2"] = {
