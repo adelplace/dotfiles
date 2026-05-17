@@ -31,6 +31,7 @@ return {
       adapters = {
         ["neotest-jest"] = {
           jestCommand = "./node_modules/.bin/jest --maxWorkers=1",
+          env = { NODE_OPTIONS = "--experimental-vm-modules" },
           cwd = function()
             return vim.fn.getcwd()
           end,
