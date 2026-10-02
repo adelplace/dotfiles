@@ -1,2 +1,0 @@
-# name url
-GeForceNOW https://international.download.nvidia.com/GFNLinux/flatpak/geforcenow.flatpakrepo

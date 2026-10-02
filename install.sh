@@ -42,17 +42,6 @@ step_packages() {
   else
     info "aur: nothing to install"
   fi
-
-  local name url app origin
-  while read -r name url; do
-    flatpak remote-add --user --if-not-exists "$name" "$url"
-  done < <(list "$PKG/flatpak-remotes.txt")
-
-  while read -r app origin; do
-    if flatpak info "$app" &>/dev/null; then continue; fi
-    info "flatpak: installing $app"
-    flatpak install --user -y --noninteractive "${origin:-flathub}" "$app"
-  done < <(list "$PKG/flatpak.txt")
 }
 
 # Move out of the way any real file that stow would refuse to overwrite

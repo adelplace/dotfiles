@@ -1,11 +1,9 @@
 alacritty
 ansible
 aws-cli
-cursor-bin
 direnv
 dotnet-runtime-9.0
 firefox
-flatpak
 freerdp
 gemini-cli
 ghostty
@@ -29,15 +27,12 @@ signal-desktop
 spotify
 steam
 stow
-t3code-bin
 texlive-bin
 texlive-fontsrecommended
 texlive-xetex
 ttf-cascadia-mono-nerd
 typora
 uv
-virtualbox
-virtualbox-host-dkms
 virt-viewer
 visual-studio-code-bin
 walker
@@ -48,5 +43,4 @@ xmlstarlet
 xpadneo-dkms
 yazi
 yq
-zed
 zsh

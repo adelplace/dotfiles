@@ -8,7 +8,7 @@ OUT="$DOTFILES/packages"
 OMARCHY_LISTS=(/usr/share/omarchy/install/*.packages)
 
 # Hardware/boot specific or provided by Omarchy itself: never part of the lists
-EXCLUDE_PACMAN=(linux linux-headers grub efibootmgr intel-ucode acpica omarchy omarchy-keyring omarchy-settings)
+EXCLUDE_PACMAN=(linux linux-headers grub efibootmgr intel-ucode acpica omarchy omarchy-keyring omarchy-settings flatpak)
 EXCLUDE_AUR=(yay-gzip-fix-debug)
 
 mkdir -p "$OUT"
@@ -24,11 +24,6 @@ comm -23 \
   <(pacman -Qqem | sort) \
   <(printf '%s\n' "${EXCLUDE_AUR[@]}" | sort -u) \
   >"$OUT/aur.txt"
-
-# One "application origin" pair per line
-if command -v flatpak >/dev/null; then
-  flatpak list --app --columns=application,origin | tr '\t' ' ' | sort >"$OUT/flatpak.txt"
-fi
 
 if command -v pnpm >/dev/null; then
   pnpm ls -g --depth 0 --json | jq -r '.[0].dependencies // {} | keys[]' >"$OUT/pnpm-global.txt"

@@ -21,7 +21,6 @@ Lists live in `packages/`, one entry per line, `#` comments allowed:
 | --- | --- |
 | `pacman.txt` | `pacman` (only what Omarchy does not already ship) |
 | `aur.txt` | `yay` |
-| `flatpak-remotes.txt` / `flatpak.txt` | `flatpak` (`application origin`) |
 | `pnpm-global.txt` | `pnpm add -g` |
 | `services-system.txt` / `services-user.txt` | `systemctl enable --now` |
 
