@@ -1,1 +1,8 @@
 tmux/.tmux/plugins
+
+# Cursor: only settings and keybindings are versioned, everything else is runtime state
+cursor/.config/Cursor/*
+!cursor/.config/Cursor/User/
+cursor/.config/Cursor/User/*
+!cursor/.config/Cursor/User/settings.json
+!cursor/.config/Cursor/User/keybindings.json
