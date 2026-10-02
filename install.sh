@@ -18,9 +18,15 @@ warn() { printf '\033[1;33m!!\033[0m %s\n' "$*" >&2; }
 list() { [[ -f $1 ]] && sed -e 's/#.*//' -e 's/[[:space:]]*$//' -e '/^$/d' "$1" || true; }
 
 check() {
-  [[ $EUID -ne 0 ]] || { warn "Run as your user, not root."; exit 1; }
+  [[ $EUID -ne 0 ]] || {
+    warn "Run as your user, not root."
+    exit 1
+  }
   # shellcheck disable=SC1091
-  [[ "$(. /etc/os-release && echo "$ID")" == omarchy ]] || { warn "This script targets Omarchy only."; exit 1; }
+  [[ "$(. /etc/os-release && echo "$ID")" == omarchy ]] || {
+    warn "This script targets Omarchy only."
+    exit 1
+  }
 }
 
 step_packages() {
@@ -127,7 +133,10 @@ main() {
     fi
     info "[$step]"
     # Subshell keeps set -e active inside the step while letting the others run
-    (set -e; "step_$step") || failed+=("$step")
+    (
+      set -e
+      "step_$step"
+    ) || failed+=("$step")
   done
 
   echo
@@ -141,7 +150,6 @@ main() {
 Still manual:
   - SSH key for GitHub, then: gh auth login
   - gcloud auth login
-  - 1Password sign-in
   - personal scripts in ~/.local/bin that are not in this repo (corpvpn, ...)
 EOF
 }
