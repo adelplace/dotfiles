@@ -1,0 +1,17 @@
+[settings]
+idiomatic_version_file_enable_tools = ["ruby"]
+
+[settings.ruby]
+
+[settings.upgrade]
+auto_prune = false
+
+[tools]
+claude = "latest"
+codex = "latest"
+copilot = "latest"
+node = "latest"
+opencode = "latest"
+pnpm = "latest"
+terraform = "1.9.8"
+"vfox:gcloud" = "latest"
