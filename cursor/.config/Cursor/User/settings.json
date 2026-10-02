@@ -1,5 +1,5 @@
-{
-  "window.commandCenter": 1,
+{ "workbench.colorTheme": "Omarchy",
+  "window.commandCenter": true,
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
   "files.autoSave": "afterDelay",
@@ -28,8 +28,9 @@
     "tests/**/*.py",
     "tests/**/*.rs"
   ],
-  "workbench.colorTheme": "Glance (rainglow)",
+  
   "editor.fontFamily": "'ComicShannsMono Nerd Font','Droid Sans Mono', 'monospace', monospace",
   "window.zoomLevel": 1,
-  "editor.fontSize": 15
+  "editor.fontSize": 15,
+  "window.autoDetectColorScheme": true
 }
